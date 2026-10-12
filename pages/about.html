@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BizdinAlem — О проекте</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/mobile.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/js/main.js" defer></script>
+    
+</head>
+<body class="about-page">
+    <header class="header">
+        <div class="header-logo-container">
+            <a href="#" class="header-logo">
+                <img src="/assets/icons/logo-colored.svg" alt="Bizdin Alem" width="108" height="85">
+            </a>
+        </div>
+        <div class="header-link-container" data-role="header-link-container">
+            <nav class="header-nav" data-role="header-nav">
+                <a href="#" class="header-nav-link">Главная</a>
+                <a href="#" class="header-nav-link">Книги</a>
+                <a href="#" class="header-nav-link">Мои книги</a>
+                <a href="#" class="header-nav-link header-nav-link--active" aria-current="page">О проекте</a>
+                <button type="button" class="btn-register btn-register--mobile">
+                    <div class="header-btn-register-text">Зарегистрироваться</div>
+                    <img src="/assets/icons/header-arrow-toUp.svg" alt="">
+                </button>
+            </nav>
+            <button type="button" class="btn-register btn-register--desktop">
+                <div class="header-btn-register-text">Зарегистрироваться</div>
+                <img src="/assets/icons/header-arrow-toUp.svg" alt="">
+            </button>
+            <div class="lang-switcher">
+                <button type="button" class="lang-switcher-toggle" aria-expanded="false">
+                    RU
+                    <img src="/assets/icons/header-arrow-toDown.svg" alt="" class="arrow">
+                </button>
+                <ul class="lang-switcher-list" hidden>
+                    <li><button type="button" class="lang-switcher-option" data-lang="ru">RU</button></li>
+                    <li><button type="button" class="lang-switcher-option" data-lang="kz">KZ</button></li>
+                    <li><button type="button" class="lang-switcher-option" data-lang="en">EN</button></li>
+                </ul>
+            </div>
+            <button type="button" class="header-mobile-toggle-profile" data-role="header-mobile-toggle-profile" aria-expanded="false" aria-label="Открыть профиль">
+                <img src="/assets/images/ProfileMobileHeader.png" alt="" width="34" height="34">
+            </button>
+            <button type="button" class="header-mobile-toggle" data-role="header-mobile-toggle" aria-expanded="false" aria-label="Открыть меню">
+                <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1H21M1 8H21M1 15H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="about">
+
+        <!-- Hero -->
+        <section class="about__hero-wrap">
+            <div class="about__hero">
+                <img src="/assets/icons/OrnamentAbout.svg" alt="" class="ornament-about">
+                <div class="about__hero-content">
+                    <h1 class="about__hero-title">Bizdin Alem<br>Книги для всех</h1>
+                    <p class="about__hero-text">Добрый сайт с книгами об инклюзии, дружбе и принятии. Истории создают студенты SDU при поддержке преподавателей - читать и слушать их могут все дети.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Наша цель -->
+        <section class="about__goal">
+            <h2 class="about__title about__title--center">Наша цель</h2>
+            <p class="about__goal-text">Создать понятный и добрый книжный мир, где каждый ребёнок чувствует себя принятым,<br>а родители и учителя находят полезные материалы для общения и обучения</p>
+
+            <ul class="about__features">
+                <li class="about__feature">
+                    <span class="about__feature-icon about__feature-icon--blue">
+                        <svg width="67" height="50" viewBox="0 0 67 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M33.1714 10.9857C33.1714 5.79801 28.4289 1.55273 22.6335 1.55273H1.55469V35.5149H22.7632C33.1714 35.5149 33.1714 44.9507 33.1714 44.9507M33.1714 44.9507V10.9857C33.1714 5.79518 37.9139 1.55273 43.7092 1.55273H64.7881V35.5149H43.7092C33.1714 35.5149 33.1714 44.9507 33.1714 44.9507ZM39.0995 48.1319C39.7592 46.9088 40.7869 45.8747 42.067 45.1458C43.3471 44.4169 44.829 44.0219 46.3461 44.0054H61.6264M27.2433 48.1319C26.5956 46.9005 25.5708 45.8591 24.288 45.1286C23.0052 44.3982 21.5171 44.0087 19.9967 44.0054H4.71636" stroke="#66B3ED" stroke-width="3.10527" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                    <h3 class="about__feature-title">Инклюзивные<br>истории</h3>
+                    <p class="about__feature-text">Книги о принятии, дружбе и уважении к особенностям каждого</p>
+                </li>
+                <li class="about__feature">
+                    <span class="about__feature-icon about__feature-icon--green">
+                        <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.5502 41.4037H4.18177C2.98969 41.4037 1.99514 41.0051 1.19812 40.2081C0.401097 39.4111 0.00172515 38.4157 0 37.2219V20.7018C0 17.8312 0.539972 15.1417 1.61992 12.6333C2.69986 10.1249 4.17832 7.93225 6.05528 6.05528C7.93225 4.17832 10.1249 2.69986 12.6333 1.61992C15.1417 0.539972 17.8312 0 20.7018 0C23.5725 0 26.262 0.539972 28.7704 1.61992C31.2787 2.69986 33.4714 4.17832 35.3484 6.05528C37.2253 7.93225 38.7038 10.1249 39.7837 12.6333C40.8637 15.1417 41.4037 17.8312 41.4037 20.7018V37.2245C41.4037 38.4148 41.0051 39.4085 40.2081 40.2055C39.4111 41.0026 38.4157 41.4019 37.2219 41.4037H30.8535V25.4788H38.8159V20.7018C38.8159 15.6558 37.0589 11.3757 33.5447 7.86152C30.0306 4.34738 25.7496 2.58945 20.7018 2.58773C15.654 2.586 11.3739 4.34393 7.86152 7.86152C4.34911 11.3791 2.59118 15.6592 2.58773 20.7018V25.4788H10.5502V41.4037Z" fill="#67B663"/>
+                        </svg>
+                    </span>
+                    <h3 class="about__feature-title">Два формата</h3>
+                    <p class="about__feature-text">Читайте или слушайте - выбирайте удобный способ восприятия.</p>
+                </li>
+                <li class="about__feature">
+                    <span class="about__feature-icon about__feature-icon--yellow">
+                        <svg width="49" height="40" viewBox="0 0 49 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.00781 20.6641V27.9164C5.0078 29.0697 5.33484 30.1992 5.95099 31.1741C6.56713 32.1489 7.4471 32.929 8.48877 33.4239L19.5746 38.6874C20.3921 39.0758 21.2858 39.2773 22.1909 39.2773C23.0959 39.2773 23.9896 39.0758 24.8071 38.6874L35.893 33.4239C36.9347 32.929 37.8146 32.1489 38.4308 31.1741C39.0469 30.1992 39.374 29.0697 39.374 27.9164V20.6663L25.0178 27.8433C24.1401 28.2823 23.1722 28.5109 22.1909 28.5109C21.2095 28.5109 20.2417 28.2823 19.364 27.8433L5.00781 20.6641Z" fill="#F1B429"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.8508 0.315947C21.6933 -0.105316 22.6866 -0.105316 23.5292 0.315947L42.7254 9.91408C44.9315 11.016 44.9315 14.1644 42.7254 15.2685L23.5292 24.8689C22.6866 25.2902 21.6933 25.2902 20.8508 24.8689L1.65456 15.2685C-0.551521 14.1644 -0.551521 11.016 1.65456 9.91408L20.8508 0.315947Z" fill="#F1B429"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M40.6539 10.7404C40.8509 10.3458 41.1965 10.0457 41.6148 9.90596C42.0331 9.76625 42.4898 9.79843 42.8843 9.9954L47.3187 12.2126C47.5947 12.3509 47.8268 12.5633 47.9889 12.8261C48.151 13.0888 48.2368 13.3915 48.2366 13.7003V21.4604C48.2366 21.9014 48.0614 22.3244 47.7495 22.6362C47.4377 22.9481 47.0147 23.1233 46.5737 23.1233C46.1327 23.1233 45.7097 22.9481 45.3979 22.6362C45.086 22.3244 44.9108 21.9014 44.9108 21.4604V14.7291L41.3966 12.9708C41.0021 12.7738 40.7019 12.4282 40.5622 12.0099C40.4225 11.5916 40.4569 11.1349 40.6539 10.7404Z" fill="#F1B429"/>
+                        </svg>
+                    </span>
+                    <h3 class="about__feature-title">Создано<br>в СДУ</h3>
+                    <p class="about__feature-text">Книги разрабатывают студенты под наставничеством преподавателей</p>
+                </li>
+                <li class="about__feature">
+                    <span class="about__feature-icon about__feature-icon--pink">
+                        <svg width="42" height="38" viewBox="0 0 42 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 38L17.955 35.2665C7.14 25.5956 0 19.1967 0 11.3896C0 4.99074 5.082 0 11.55 0C15.204 0 18.711 1.67738 21 4.30736C23.289 1.67738 26.796 0 30.45 0C36.918 0 42 4.99074 42 11.3896C42 19.1967 34.86 25.5956 24.045 35.2665L21 38Z" fill="#FA809B"/>
+                        </svg>
+                    </span>
+                    <h3 class="about__feature-title">Для всех</h3>
+                    <p class="about__feature-text">Книги разрабатывают студенты под наставничеством преподавателей</p>
+                </li>
+                <li class="about__feature">
+                    <span class="about__feature-icon about__feature-icon--purple">
+                        <svg width="42" height="51" viewBox="0 0 42 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 33V28H0V33H5H10ZM5 33H0V49H5H10V33H5ZM5 49H0V51H5H10V49H5Z" fill="#AD9CE7"/>
+                        <path d="M26 20V15H16V20H21H26ZM21 20H16V50.5H21H26V20H21Z" fill="#AD9CE7"/>
+                        <path d="M42 5V0H32V5H37H42ZM37 5H32V51H37H42V5H37Z" fill="#AD9CE7"/>
+                        </svg>
+                    </span>
+                    <h3 class="about__feature-title">Исследуем<br>и развиваемся</h3>
+                    <p class="about__feature-text">Опросы и обратная связь помогают делать проект лучше каждый день</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Баннер (картинка) -->
+        <div class="about__banner">
+            <span class="about__placeholder" aria-hidden="true"></span>
+        </div>
+
+        <!-- Команда -->
+        <section class="about__team">
+            <h2 class="about__title">Команда Bizdin Alem</h2>
+
+            <div class="about__team-group">
+                <h3 class="about__team-subtitle">Руководство проекта</h3>
+                <ul class="about__team-grid">
+                    <li class="about__member">
+                        <span class="about__member-role">Руководитель проекта</span>
+                        <div class="about__member-body">
+                            <div class="about__member-photo"><span class="about__placeholder" aria-hidden="true"></span></div>
+                            <p class="about__member-name">Сулеймен Мадина</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="about__team-group">
+                <h3 class="about__team-subtitle">Создание книг</h3>
+                <ul class="about__team-grid">
+                    <li class="about__member">
+                        <span class="about__member-role">Авторы книг</span>
+                        <div class="about__member-body">
+                            <div class="about__member-photo"><span class="about__placeholder" aria-hidden="true"></span></div>
+                            <p class="about__member-name">Студенты SDU</p>
+                        </div>
+                    </li>
+                    <li class="about__member">
+                        <span class="about__member-role">Редактор</span>
+                        <div class="about__member-body">
+                            <div class="about__member-photo"><span class="about__placeholder" aria-hidden="true"></span></div>
+                            <p class="about__member-name">Салыхова Бактыгул</p>
+                        </div>
+                    </li>
+                    <li class="about__member">
+                        <span class="about__member-role">Озвучивание</span>
+                        <div class="about__member-body">
+                            <div class="about__member-photo"><span class="about__placeholder" aria-hidden="true"></span></div>
+                            <p class="about__member-name">Батырхан Ералы, Лейла Тельман</p>
+                        </div>
+                    </li>
+                    <li class="about__member">
+                        <span class="about__member-role">Иллюстраторы</span>
+                        <div class="about__member-body">
+                            <div class="about__member-photo"><span class="about__placeholder" aria-hidden="true"></span></div>
+                            <p class="about__member-name">Аманова Адель, Рахметулла Бекзада</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="about__team-group">
+                <h3 class="about__team-subtitle">Техническое руководство и дизайн</h3>
+                <ul class="about__team-grid">
+                    <li class="about__member">
+                        <span class="about__member-role">Техническое руководство</span>
+                        <div class="about__member-body">
+                            <div class="about__member-photo"><span class="about__placeholder" aria-hidden="true"></span></div>
+                            <p class="about__member-name">Ахметова Асельхан и команда Modydev</p>
+                        </div>
+                    </li>
+                    <li class="about__member">
+                        <span class="about__member-role">Веб-дизайн</span>
+                        <div class="about__member-body">
+                            <div class="about__member-photo"><span class="about__placeholder" aria-hidden="true"></span></div>
+                            <p class="about__member-name">Маратқызы Сания, Абсамат Таңжарық</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="about__team-group">
+                <h3 class="about__team-subtitle">Команда разработки</h3>
+                <ul class="about__team-grid">
+                    <li class="about__member">
+                        <span class="about__member-role">Менеджер проекта</span>
+                        <div class="about__member-body">
+                            <div class="about__member-photo"><span class="about__placeholder" aria-hidden="true"></span></div>
+                            <p class="about__member-name">Молдаш Ақназ</p>
+                        </div>
+                    </li>
+                    <li class="about__member">
+                        <span class="about__member-role">Backend-разработчик</span>
+                        <div class="about__member-body">
+                            <div class="about__member-photo"><span class="about__placeholder" aria-hidden="true"></span></div>
+                            <p class="about__member-name">Аманжол Сламбек</p>
+                        </div>
+                    </li>
+                    <li class="about__member">
+                        <span class="about__member-role">Инженер баз данных</span>
+                        <div class="about__member-body">
+                            <div class="about__member-photo"><span class="about__placeholder" aria-hidden="true"></span></div>
+                            <p class="about__member-name">Мақсұт Данияр</p>
+                        </div>
+                    </li>
+                    <li class="about__member">
+                        <span class="about__member-role">Frontend-разработчик</span>
+                        <div class="about__member-body">
+                            <div class="about__member-photo"><span class="about__placeholder" aria-hidden="true"></span></div>
+                            <p class="about__member-name">Артықбай Еңлік</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-container__brand">
+                <a href="#" class="footer__logo">
+                    <img src="/assets/icons/logo-white.svg" alt="Bizdin Alem" width="186" height="132">
+                </a>
+                <p class="footer__description">“Bizdin Alem” – инклюзия туралы қазақ, орыс және ағылшын тілінде жазылған кітаптарды оқитын балаларға арналған онлайн кітапхана.</p>
+
+                <div class="footer__lang-switcher">
+                    <button type="button" class="footer__lang-toggle" aria-expanded="false">
+                        Русский
+                        <img src="/assets/icons/ArrowToDownLangSwitcher.svg" alt="" class="footer__lang-arrow">
+                    </button>
+                    <ul class="footer__lang-list" hidden>
+                        <li><button type="button" class="footer__lang-option" data-lang="ru">Русский</button></li>
+                        <li><button type="button" class="footer__lang-option" data-lang="kz">Қазақша</button></li>
+                        <li><button type="button" class="footer__lang-option" data-lang="en">English</button></li>
+                    </ul>
+                </div>
+            </div>
+
+            <nav class="footer__nav">
+                <h3 class="footer__nav-title">КІТАПХАНА</h3>
+                <div class="line"></div>
+                <a href="#" class="footer__nav-link">Басты бет</a>
+                <a href="#" class="footer__nav-link">Кітаптар</a>
+                <a href="#" class="footer__nav-link">Менің кітаптарым</a>
+                <a href="#" class="footer__nav-link">Жоба туралы</a>
+            </nav>
+
+            <nav class="footer__nav">
+                <h3 class="footer__nav-title footer__nav-title-contacts">Контакты</h3>
+                <a href="#" class="footer__nav-link footer__nav-link--margin">@bizdinalem</a>
+            </nav>
+
+        </div>
+    </footer>
+
+</body>
+</html>

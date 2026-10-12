@@ -80,6 +80,17 @@ if (trendingSliderEl && window.innerWidth > 480) {
         });
     });
 })();
+// Header — кнопка "Зарегистрироваться" → страница регистрации
+(function initRegisterButtons() {
+    const buttons = document.querySelectorAll('.btn-register');
+    if (!buttons.length) return;
+
+    buttons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            window.location.href = '/pages/registration.html';
+        });
+    });
+})();
 
 const footerLangSwitcher = document.querySelector('.footer__lang-switcher');
 const footerLangToggle = document.querySelector('.footer__lang-toggle');

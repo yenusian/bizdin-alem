@@ -1278,3 +1278,138 @@
         height: auto;
     }
 }
+
+/* ============================================================= */
+/*   MOBILE — about page (<= 480px)                               */
+/* ============================================================= */
+@media (max-width: 480px){
+
+    .about{
+        padding-bottom: 24px;
+    }
+    .about__title{
+        font-size: 21px;
+    }
+
+    /* ---------- Hero ---------- */
+    .about__hero-wrap{
+        margin-top: 0;
+        padding: 24px 17px 0;
+    }
+    .about__hero{
+        min-height: 160px;
+        border-radius: 6px;
+        background-size: auto 100%;
+    }
+    .ornament-about{
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: auto;
+    }
+    .about__hero-content{
+        max-width: 62%;
+        padding: 0 17px;
+    }
+    .about__hero-title{
+        font-size: 24px;
+        margin-bottom: 9px;
+    }
+    .about__hero-text{
+        font-size: 6.5px;
+        line-height: 146%;
+        max-width: 100%;
+    }
+
+    /* ---------- Наша цель ---------- */
+    .about__goal{
+        padding: 24px 17px 0;
+    }
+    .about__goal-text{
+        margin: 14px auto 20px;
+        font-size: 8px;
+        line-height: 150%;
+    }
+    .about__features{
+        gap: 8px;
+    }
+    .about__feature{
+        min-height: 0;
+        padding: 12px 4px 10px;
+        border-radius: 8px;
+    }
+    .about__feature-icon{
+        width: 34px;
+        height: 34px;
+        margin-bottom: 10px;
+    }
+    .about__feature-icon svg{
+        width: 18px;
+        height: 18px;
+    }
+    .about__feature-title{
+        font-size: 8px;
+        margin-bottom: 9px;
+    }
+    .about__feature-text{
+        font-size: 4.5px;
+        line-height: 150%;
+    }
+
+    /* ---------- Баннер ---------- */
+    .about__banner{
+        width: calc(100% - 34px);
+        height: 100px;
+        margin-top: 22px;
+        border-radius: 8px;
+    }
+    .about__banner .about__placeholder{
+        width: 30px;
+        height: 30px;
+    }
+
+    /* ---------- Команда ---------- */
+    .about__team{
+        padding: 24px 17px 0;
+    }
+    .about__team .about__title{
+        font-size: 17px;
+    }
+    .about__team-group{
+        margin-top: 12px;
+    }
+    .about__team-group + .about__team-group{
+        margin-top: 18px;
+    }
+    .about__team-subtitle{
+        font-size: 9px;
+        margin-bottom: 6px;
+    }
+    .about__team-grid{
+        grid-template-columns: repeat(2, minmax(0, 160px));
+        gap: 8px 14px;
+    }
+    .about__member{
+        padding: 6px 8px 8px 6px;
+        border-radius: 9px;
+        gap: 6px;
+    }
+    .about__member-role{
+        font-size: 5px;
+    }
+    .about__member-body{
+        gap: 11px;
+    }
+    .about__member-photo{
+        width: 52px;
+        height: 51px;
+        border-radius: 3px;
+    }
+    .about__member .about__placeholder{
+        width: 22px;
+        height: 22px;
+    }
+    .about__member-name{
+        font-size: 7.5px;
+    }
+}

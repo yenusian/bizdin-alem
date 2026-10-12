@@ -303,8 +303,8 @@
     justify-content: center;
     background-image: url(/assets/icons/BookOfDayIcon.svg);
     background-repeat: no-repeat;
-    background-size: 100% 100%;  /* растягиваем фигуру под размер текста-контейнера */
-    width: 196.5px;               /* точные размеры из Figma */
+    background-size: 100% 100%;  
+    width: 196.5px;               
     height: 65.77px;
     color: #FFFFFF;
     font-weight: 500;
@@ -9141,4 +9141,253 @@
 .welcome-cta__decor--5{
     top: 909px;
     right: 49px;
+}
+
+
+/* =========================================================
+   ABOUT PAGE (О проекте)
+   ========================================================= */
+.about-page{
+    background: #ECF2F9;
+}
+.about{
+    font-family: 'Rubik', sans-serif;
+    padding-bottom: 120px;
+}
+
+/* общий заголовок секции */
+.about__title{
+    font-weight: 500;
+    font-size: 48.65px;
+    line-height: 102%;
+    letter-spacing: -0.05em;
+    color: #085E84;
+}
+.about__title--center{
+    text-align: center;
+}
+
+/* placeholder картинки */
+.about__placeholder{
+    display: block;
+    width: 64px;
+    height: 64px;
+    background-color: currentColor;
+    -webkit-mask: url('/assets/icons/akar-icons_image.svg') center / contain no-repeat;
+    mask: url('/assets/icons/akar-icons_image.svg') center / contain no-repeat;
+}
+
+/* ---------- Hero ---------- */
+.about__hero-wrap{
+    margin-top: -60px;
+    padding: 96px 30px 0;
+}
+.about__hero{
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    max-width: 1380px;
+    min-height: 560px;
+    margin: 0 auto;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #1C95D6;
+    background-image: url('/assets/images/SduImage.png');
+    background-size: auto 560px;
+    background-position: right center;
+}
+.ornament-about{
+    position: absolute;
+    z-index: 2;
+}
+.about__hero::before{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    background: linear-gradient(90deg,
+        #1C95D6 0%,
+        #1C95D6 30%,
+        rgba(28, 149, 214, 0.75) 48%,
+        rgba(28, 149, 214, 0) 75%);
+    pointer-events: none;
+}
+.about__hero-content{
+    position: relative;
+    z-index: 3;
+    max-width: 820px;
+    padding: 0 56px;
+}
+.about__hero-title{
+    font-weight: 500;
+    font-size: 90px;
+    line-height: 87%;
+    letter-spacing: -0.05em;
+    color: #fff;
+    margin-bottom: 30px;
+}
+.about__hero-text{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 20.57px;
+    line-height: 146%;
+    color: #fff;
+    max-width: 590px;
+}
+
+/* ---------- Наша цель ---------- */
+.about__goal{
+    max-width: 1380px;
+    margin: 0 auto;
+    padding: 70px 0 0;
+}
+.about__goal-text{
+    margin: 40px auto 56px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 146%;
+    color: #282828;
+}
+.about__features{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 27px;
+}
+.about__feature{
+    background: #fff;
+    border-radius: 25px;
+    min-height: 400px;
+    padding: 42px 24px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.about__feature-icon{
+    width: 117px;
+    height: 117px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 33px;
+}
+.about__feature-icon--blue  { background: #ECF5FD; }
+.about__feature-icon--green { background: #ECF6E9; }
+.about__feature-icon--yellow{ background: #FEF5E1; }
+.about__feature-icon--pink  { background: #FDF1F4; }
+.about__feature-icon--purple{ background: #F3F2FD; }
+
+.about__feature-title{
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 110.00000000000001%;
+    color: #173A54;
+    min-height: 2.3em;
+    margin-bottom: 29px;
+}
+.about__feature-text{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #173A54;
+}
+
+/* ---------- Баннер ---------- */
+.about__banner{
+    width: calc(100% - 60px);
+    max-width: 1380px;
+    height: 350px;
+    margin: 80px auto 0;
+    background: #fff;
+    border-radius: 24px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about__banner .about__placeholder{
+    width: 100px;
+    height: 100px;
+    color: #000;
+    opacity: 0.1;
+
+}
+
+/* ---------- Команда ---------- */
+.about__team{
+    max-width: 1380px;
+    margin: 0 auto;
+    padding: 90px 0 0;
+}
+.about__team-group{
+    margin-top: 36px;
+}
+.about__team-group + .about__team-group{
+    margin-top: 56px;
+}
+.about__team-subtitle{
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 110.00000000000001%;
+    letter-spacing: -0.05em;
+    color: #085E84;
+    margin-bottom: 16px;
+}
+.about__team-grid{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 540px);
+    gap: 20px 46px;
+}
+.about__member{
+    background: #fff;
+    border-radius: 25px;
+    padding: 15px 40px 15px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.about__member-role{
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    color: #199FD9;
+}
+.about__member-body{
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+.about__member-photo{
+    flex-shrink: 0;
+    width: 170px;
+    height: 167px;
+    border-radius: 5px;
+    background: #E4F2FD;
+    color: #8EB3D1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about__member-photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.about__member-name{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 110.00000000000001%;
+    letter-spacing: -0.05em;
+    color: #173A54;
+}
+.about__member .about__placeholder {
+    color: #8EB3D1;
 }
