@@ -852,6 +852,8 @@ function initAdminSelects() {
         const valueEl = select.querySelector('.admin-select__value');
         const items = select.querySelectorAll('.admin-select__item');
 
+        if (!toggle || !list) return;
+
         toggle.addEventListener('click', () => {
             const isOpen = select.classList.toggle('admin-select--open');
             list.hidden = !isOpen;
