@@ -1,0 +1,47 @@
+/* =============================================================
+   Тёмная тема — РУЧНЫЕ правки
+   -------------------------------------------------------------
+   Основную тёмную тему строит js/preferences.js автоматически
+   из styles.css и mobile.css (светлые фоны → тёмные,
+   тёмный текст → светлый, фирменные цвета не трогает).
+
+   Здесь — только то, что автоматика не может угадать.
+   Каждое правило начинается с [data-theme="dark"].
+   ============================================================= */
+
+/* Базовый фон и текст для страниц, где фон не задан явно */
+html[data-theme="dark"],
+[data-theme="dark"] body{
+    background-color: #0F1A26;
+    color: #E2EAF2;
+}
+
+/* Блоки с data-theme-keep остаются светлыми, как в макете
+   (баннеры с иллюстрациями). Добавить атрибут можно любому блоку в HTML. */
+[data-theme="dark"] [data-theme-keep]{
+    color: #000000;
+    color-scheme: light;
+}
+
+/* Иконка: в тёмной теме показываем солнце */
+[data-theme="dark"] .theme-toggle__icon--moon{ display: none; }
+[data-theme="dark"] .theme-toggle__icon--sun{ display: block; }
+
+/* Поля ввода и подсказки */
+[data-theme="dark"] :is(input, textarea, select):not([data-theme-keep] *){
+    color: #E2EAF2;
+}
+[data-theme="dark"] :not([data-theme-keep] *)::placeholder{
+    color: #8C9BAA;
+}
+
+/* Мягче выглядят тени на тёмном фоне */
+[data-theme="dark"] .header{
+    box-shadow: 0 4px 12px 0 #00000080;
+}
+
+/* Плавное переключение темы */
+html.theme-transition,
+html.theme-transition *{
+    transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease !important;
+}

@@ -12,7 +12,7 @@
 
 .header{
     position: relative;
-    z-index: 2;
+    z-index: 100; /* header и его выпадающие меню всегда поверх контента */
     background-color: #fff;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
@@ -144,6 +144,29 @@
     background-color: #F0F8FC;
 }
 
+/* Переключатель темы (логика — js/preferences.js, тёмные цвета — css/dark.css) */
+.theme-toggle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+    border: none;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    box-shadow: 2px 2px 2px 0 #0000001A;
+    color: #199FD9;
+    cursor: pointer;
+}
+.theme-toggle:hover{
+    box-shadow: 2px 2px 4px 0 #0000002A;
+}
+.theme-toggle__icon--sun{
+    display: none;
+}
+
 /* Main page */
 .hero{
     padding: 44px 45px 71px 45px;
@@ -162,6 +185,7 @@
 
 /* Базовые стили общие для всех трёх */
 .hero-slide{
+    min-height: 574px; /* высота баннера (580px минус рамка 2×3px), не зависит от длины текста */
     position: relative;
     display: flex !important;
     align-items: center;
@@ -187,6 +211,7 @@
 .hero-slide--content{
     position: relative;
     z-index: 2;
+    align-self: stretch; /* на всю высоту баннера: кнопки всегда внизу, при любой длине заголовка */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -201,7 +226,8 @@
     color: #fff;
     font-size: 55px;
     line-height: 102%;
-    margin-bottom: 244px;
+    margin-bottom: auto; /* было 244px — длинный заголовок (KZ/EN) выталкивал кнопки за баннер */
+    padding-bottom: 24px;
 }
 .hero-slide--buttons{
     display: flex;

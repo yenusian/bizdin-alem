@@ -99,6 +99,16 @@
     .header-mobile-toggle{
         display: flex;
     }
+    .theme-toggle{
+        width: 29px;
+        height: 29px;
+        margin-right: 0;
+        border: 1px solid #199CD7;
+    }
+    .theme-toggle__icon{
+        width: 16px;
+        height: 16px;
+    }
     .lang-switcher-option{
         font-size: 14px;
     }
@@ -146,6 +156,7 @@
     }
     .hero-slide{
         height: auto;
+        min-height: 0;
     }
 
     /* Slide 1 — welcome */
@@ -153,6 +164,7 @@
         flex-direction: column;
         align-items: center;
         padding: 24px 16px;
+        height: 100%; /* на всю высоту баннера — картинка ужимается, если заголовок длиннее (KZ/EN) */
     }
     .hero-slide--decor{
         display: none;
@@ -166,6 +178,7 @@
         text-align: left;
         align-self: flex-start;
         margin-bottom: 20px;
+        padding-bottom: 0;
         font-weight: 800;
         font-size: 32px;
         line-height: 110.00000000000001%;
@@ -174,7 +187,10 @@
         order: 2;
         position: static;
         width: 358px;
+        max-width: 100%;
         max-height: 210px;
+        flex: 1 1 auto;  /* картинка уступает место тексту и кнопкам */
+        min-height: 0;
         margin-bottom: 20px;
     }
     .hero-slide--buttons{
