@@ -1,0 +1,202 @@
+/* =============================================================
+   Демо-слой: уведомления (toast) и панель «Все страницы».
+   Нужен только пока нет бэкенда — потом файл можно удалить
+   вместе с js/demo.js.
+   ============================================================= */
+
+/* ---------- Toast ---------- */
+.demo-toast-stack{
+    position: fixed;
+    left: 50%;
+    bottom: 28px;
+    transform: translateX(-50%);
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    pointer-events: none;
+    width: calc(100% - 32px);
+    max-width: 460px;
+}
+.demo-toast{
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.35;
+    color: #fff;
+    background-color: #199FD9;
+    padding: 14px 22px;
+    border-radius: 24px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.demo-toast--visible{
+    opacity: 1;
+    transform: translateY(0);
+}
+.demo-toast--warn{
+    background-color: #F07B3F;
+}
+
+/* ---------- Кликабельные карточки ---------- */
+.demo-clickable{
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.demo-clickable:hover{
+    transform: translateY(-4px);
+}
+
+/* ---------- Каталог: фильтр и «ничего не найдено» ---------- */
+.collection__search{
+    position: relative;
+}
+.demo-filter{
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    z-index: 50;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 14px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    max-width: 100%;
+}
+.demo-filter__chip{
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 8px 14px;
+    border: 2px solid #199FD9;
+    border-radius: 16px;
+    background: transparent;
+    color: #199FD9;
+    cursor: pointer;
+}
+.demo-filter__chip--active{
+    background: #199FD9;
+    color: #fff;
+}
+.demo-empty{
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #8C8C8C;
+    text-align: center;
+    padding: 40px 16px;
+    grid-column: 1 / -1;
+}
+
+/* ---------- Панель «Все страницы» ---------- */
+.demo-nav-toggle{
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 9999;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: none;
+    background: #199FD9;
+    color: #fff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.85;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.demo-nav-toggle:hover{
+    opacity: 1;
+    transform: scale(1.06);
+}
+.demo-nav{
+    position: fixed;
+    left: 20px;
+    bottom: 84px;
+    z-index: 9999;
+    width: 300px;
+    max-width: calc(100vw - 40px);
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    padding: 18px 18px 14px;
+    background: #fff;
+    color: #282828;
+    border-radius: 24px;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.22);
+    font-family: 'Inter', sans-serif;
+}
+.demo-nav__title{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+.demo-nav__hint{
+    font-size: 12px;
+    color: #8C8C8C;
+    margin-bottom: 12px;
+}
+.demo-nav__group{
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #199FD9;
+    margin: 12px 0 6px;
+}
+.demo-nav__link{
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    color: inherit;
+    text-decoration: none;
+    padding: 7px 10px;
+    border-radius: 12px;
+}
+.demo-nav__link:hover{
+    background: #EAF6FC;
+}
+.demo-nav__link--current{
+    background: #199FD9;
+    color: #fff;
+}
+.demo-nav__link--current:hover{
+    background: #199FD9;
+}
+.demo-nav__reset{
+    margin-top: 14px;
+    width: 100%;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 14px;
+    border: 2px solid #F07B3F;
+    background: transparent;
+    color: #F07B3F;
+    cursor: pointer;
+}
+
+/* Тёмная тема */
+[data-theme="dark"] .demo-nav,
+[data-theme="dark"] .demo-filter{
+    background: #16232F;
+    color: #E2EAF2;
+}
+[data-theme="dark"] .demo-nav__link:hover{
+    background: #1F3242;
+}
+
+@media (max-width: 480px){
+    .demo-nav-toggle{ left: 12px; bottom: 12px; width: 46px; height: 46px; }
+    .demo-nav{ left: 12px; bottom: 68px; }
+    .demo-toast{ font-size: 14px; }
+}

@@ -4,30 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BizdinAlem</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/vendor/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/mobile.css">
     <link rel="stylesheet" href="/css/dark.css">
     <script src="/js/preferences.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="/js/demo.js" defer></script>
     <script src="/js/main.js" defer></script>
     <script src="/js/translations.js" defer></script>
     <script src="/js/i18n.js" defer></script>
     
+    <link rel="stylesheet" href="/css/demo.css">
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/logo-colored.svg">
 </head>
 <body class="little-writer__body">
     <header class="header">
         <div class="header-logo-container">
-            <a href="#" class="header-logo">
+            <a href="/index.html" class="header-logo">
                 <img src="/assets/icons/logo-colored.svg" alt="Bizdin Alem" width="108" height="85">
             </a>
         </div>
         <div class="header-link-container" data-role="header-link-container">
             <nav class="header-nav" data-role="header-nav">
-                <a href="#" class="header-nav-link header-nav-link--active" aria-current="page">Главная</a>
-                <a href="#" class="header-nav-link">Книги</a>
-                <a href="#" class="header-nav-link">Мои книги</a>
-                <a href="#" class="header-nav-link">О проекте</a>
+                <a href="/index.html" class="header-nav-link">Главная</a>
+                <a href="/pages/catalog.html" class="header-nav-link header-nav-link--active" aria-current="page">Книги</a>
+                <a href="/pages/profile-child.html" class="header-nav-link">Мои книги</a>
+                <a href="/pages/about.html" class="header-nav-link">О проекте</a>
                 <button type="button" class="btn-register btn-register--mobile">
                     <div class="header-btn-register-text">Зарегистрироваться</div>
                     <img src="/assets/icons/header-arrow-toUp.svg" alt="">
@@ -73,7 +76,7 @@
         <div class="reader__card">
 
             <div class="reader__topbar">
-                <a href="#" class="reader__back">
+                <a href="/pages/book.html" class="reader__back">
                     <svg width="40" height="21" viewBox="0 0 40 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.414648 9.48105C-0.141628 10.0373 -0.141628 10.9392 0.414648 11.4955L9.47969 20.5606C10.036 21.1168 10.9379 21.1168 11.4941 20.5606C12.0504 20.0043 12.0504 19.1024 11.4941 18.5461L3.43633 10.4883L11.4941 2.43047C12.0504 1.87419 12.0504 0.972288 11.4941 0.416012C10.9379 -0.140264 10.036 -0.140264 9.47969 0.416012L0.414648 9.48105ZM37.6572 11.9127C38.4439 11.9127 39.0816 11.275 39.0816 10.4883C39.0816 9.70159 38.4439 9.06385 37.6572 9.06385V10.4883V11.9127ZM1.42188 10.4883V11.9127H37.6572V10.4883V9.06385H1.42188V10.4883Z" fill="#199FD9"/>
                     </svg>
@@ -198,7 +201,7 @@
         <div class="footer-container">
 
             <div class="footer-container__brand">
-                <a href="#" class="footer__logo">
+                <a href="/index.html" class="footer__logo">
                     <img src="/assets/icons/logo-white.svg" alt="Bizdin Alem" width="186" height="132">
                 </a>
                 <p class="footer__description">“Bizdin Alem” – инклюзия туралы қазақ, орыс және ағылшын тілінде жазылған кітаптарды оқитын балаларға арналған онлайн кітапхана.</p>
@@ -219,10 +222,10 @@
             <nav class="footer__nav">
                 <h3 class="footer__nav-title">КІТАПХАНА</h3>
                 <div class="line"></div>
-                <a href="#" class="footer__nav-link">Басты бет</a>
-                <a href="#" class="footer__nav-link">Кітаптар</a>
-                <a href="#" class="footer__nav-link">Менің кітаптарым</a>
-                <a href="#" class="footer__nav-link">Жоба туралы</a>
+                <a href="/index.html" class="footer__nav-link">Басты бет</a>
+                <a href="/pages/catalog.html" class="footer__nav-link">Кітаптар</a>
+                <a href="/pages/profile-child.html" class="footer__nav-link">Менің кітаптарым</a>
+                <a href="/pages/about.html" class="footer__nav-link">Жоба туралы</a>
             </nav>
 
             <nav class="footer__nav">
