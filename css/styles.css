@@ -303,7 +303,7 @@
 /* 2nd slide */
 .hero-slide--book-of-day{
     font-family: 'Rubik', sans-serif;
-    background: url(/assets/images/BackgroundOfSecondSlide.png);
+    background: url(../assets/images/BackgroundOfSecondSlide.png);
     background-repeat: no-repeat;
     background-size: cover; 
     background-position: center;
@@ -327,7 +327,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-image: url(/assets/icons/BookOfDayIcon.svg);
+    background-image: url(../assets/icons/BookOfDayIcon.svg);
     background-repeat: no-repeat;
     background-size: 100% 100%;  
     width: 196.5px;               
@@ -9199,8 +9199,8 @@
     width: 64px;
     height: 64px;
     background-color: currentColor;
-    -webkit-mask: url('/assets/icons/akar-icons_image.svg') center / contain no-repeat;
-    mask: url('/assets/icons/akar-icons_image.svg') center / contain no-repeat;
+    -webkit-mask: url('../assets/icons/akar-icons_image.svg') center / contain no-repeat;
+    mask: url('../assets/icons/akar-icons_image.svg') center / contain no-repeat;
 }
 
 /* ---------- Hero ---------- */
@@ -9219,7 +9219,7 @@
     display: flex;
     align-items: center;
     background-color: #1C95D6;
-    background-image: url('/assets/images/SduImage.png');
+    background-image: url('../assets/images/SduImage.png');
     background-size: auto 560px;
     background-position: right center;
 }

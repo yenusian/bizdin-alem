@@ -87,7 +87,7 @@ if (trendingSliderEl && window.innerWidth > 480) {
 
     buttons.forEach((btn) => {
         btn.addEventListener('click', () => {
-            window.location.href = '/pages/registration.html';
+            window.location.href = (window.BA_ROOT || '/') + 'pages/registration.html';
         });
     });
 })();
@@ -388,7 +388,7 @@ lwSaveBtn?.addEventListener('click', () => {
 
 const lwBackBtn = document.getElementById('lwBackBtn');
 lwBackBtn?.addEventListener('click', () => {
-    window.location.href = '/pages/little-writer.html';
+    window.location.href = (window.BA_ROOT || '/') + 'pages/little-writer.html';
 });
 
 // Reager page script

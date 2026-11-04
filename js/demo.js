@@ -16,20 +16,26 @@
 (function () {
     'use strict';
 
+    // Корень сайта = папка выше js/. Работает и на localhost, и на GitHub Pages
+    // (там сайт живёт в подпапке: https://<ник>.github.io/<репозиторий>/).
+    const ROOT = new URL('..', document.currentScript.src).href;
+    window.BA_ROOT = ROOT;
+    const url = (p) => ROOT + p.replace(/^\//, '');
+
     const PAGES = {
-        home: '/index.html',
-        catalog: '/pages/catalog.html',
-        book: '/pages/book.html',
-        reader: '/pages/book-reader.html',
-        listen: '/pages/book-reader.html?mode=listen',
-        about: '/pages/about.html',
-        registration: '/pages/registration.html',
-        writer: '/pages/little-writer.html',
-        writerWrite: '/pages/little-writer-write.html',
+        home: url('/index.html'),
+        catalog: url('/pages/catalog.html'),
+        book: url('/pages/book.html'),
+        reader: url('/pages/book-reader.html'),
+        listen: url('/pages/book-reader.html?mode=listen'),
+        about: url('/pages/about.html'),
+        registration: url('/pages/registration.html'),
+        writer: url('/pages/little-writer.html'),
+        writerWrite: url('/pages/little-writer-write.html'),
         profile: {
-            child: '/pages/profile-child.html',
-            parent: '/pages/profile-parent.html',
-            teacher: '/pages/profile-teacher.html',
+            child: url('/pages/profile-child.html'),
+            parent: url('/pages/profile-parent.html'),
+            teacher: url('/pages/profile-teacher.html'),
         },
     };
 
@@ -37,13 +43,14 @@
     const SHELF_KEY = 'ba-demo-shelf';
     const PANEL_KEY = 'ba-demo-panel';
     const SOON = 'Эта функция заработает после подключения сервера';
-    // Озвучка для читалки: положи mp3 и впиши путь, например '/assets/audio/mister-lis.mp3'.
+    // Озвучка для читалки: положи mp3 и впиши путь, например url('assets/audio/mister-lis.mp3').
     // Пусто — играет тихая дорожка (прогресс и подсветка текста всё равно работают).
     const AUDIO_SRC = '';
 
     const $ = (sel, root = document) => root.querySelector(sel);
     const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
-    const path = location.pathname.replace(/\/+$/, '') || '/index.html';
+    // текущая страница без ?query и #hash; «папка/» = «папка/index.html»
+    const here = (location.origin + location.pathname).replace(/\/$/, '/index.html');
     const params = new URLSearchParams(location.search);
 
     function store(key, value) {
@@ -112,7 +119,8 @@
         const profileUrl = PAGES.profile[(user && user.role) || 'child'];
 
         // «Мои книги» в шапке и подвале ведут в профиль своей роли
-        $$('a[href="/pages/profile-child.html"].header-nav-link, a[href="/pages/profile-child.html"].footer__nav-link')
+        $$('a.header-nav-link, a.footer__nav-link')
+            .filter((a) => a.href === PAGES.profile.child)
             .forEach((a) => { a.href = profileUrl; });
 
         // Мобильная иконка профиля в шапке
@@ -469,34 +477,34 @@
     /* ---------- Панель «Все страницы» ---------- */
     const NAV_GROUPS = [
         ['Сайт', [
-            ['Приветствие (светлая)', '/pages/welcome-light.html'],
-            ['Приветствие (тёмная)', '/pages/welcome-dark.html'],
-            ['Главная', '/index.html'],
-            ['Каталог книг', '/pages/catalog.html'],
-            ['Страница книги', '/pages/book.html'],
-            ['Читалка', '/pages/book-reader.html'],
-            ['Маленький писатель', '/pages/little-writer.html'],
-            ['Пишем историю', '/pages/little-writer-write.html'],
-            ['Опрос', '/pages/survey.html'],
-            ['О проекте', '/pages/about.html'],
-            ['Регистрация', '/pages/registration.html'],
+            ['Приветствие (светлая)', url('/pages/welcome-light.html')],
+            ['Приветствие (тёмная)', url('/pages/welcome-dark.html')],
+            ['Главная', url('/index.html')],
+            ['Каталог книг', url('/pages/catalog.html')],
+            ['Страница книги', url('/pages/book.html')],
+            ['Читалка', url('/pages/book-reader.html')],
+            ['Маленький писатель', url('/pages/little-writer.html')],
+            ['Пишем историю', url('/pages/little-writer-write.html')],
+            ['Опрос', url('/pages/survey.html')],
+            ['О проекте', url('/pages/about.html')],
+            ['Регистрация', url('/pages/registration.html')],
         ]],
         ['Профили', [
-            ['Ребёнок', '/pages/profile-child.html'],
-            ['Родитель', '/pages/profile-parent.html'],
-            ['Учитель', '/pages/profile-teacher.html'],
+            ['Ребёнок', url('/pages/profile-child.html')],
+            ['Родитель', url('/pages/profile-parent.html')],
+            ['Учитель', url('/pages/profile-teacher.html')],
         ]],
         ['Админ-панель', [
-            ['Дашборд', '/pages/admin/index.html'],
-            ['Аналитика', '/pages/admin/analytics.html'],
-            ['Пользователи', '/pages/admin/users.html'],
-            ['Участники', '/pages/admin/members.html'],
-            ['Школы', '/pages/admin/school.html'],
-            ['Модерация', '/pages/admin/moderation.html'],
-            ['Отзывы', '/pages/admin/feedback.html'],
-            ['Поддержка', '/pages/admin/support.html'],
-            ['Уведомления', '/pages/admin/notifications.html'],
-            ['Настройки', '/pages/admin/settings.html'],
+            ['Дашборд', url('/pages/admin/index.html')],
+            ['Аналитика', url('/pages/admin/analytics.html')],
+            ['Пользователи', url('/pages/admin/users.html')],
+            ['Участники', url('/pages/admin/members.html')],
+            ['Школы', url('/pages/admin/school.html')],
+            ['Модерация', url('/pages/admin/moderation.html')],
+            ['Отзывы', url('/pages/admin/feedback.html')],
+            ['Поддержка', url('/pages/admin/support.html')],
+            ['Уведомления', url('/pages/admin/notifications.html')],
+            ['Настройки', url('/pages/admin/settings.html')],
         ]],
     ];
 
@@ -523,7 +531,7 @@
         NAV_GROUPS.forEach(([group, links]) => {
             html += `<p class="demo-nav__group">${group}</p>`;
             links.forEach(([label, href]) => {
-                const current = href === path || (href === '/index.html' && path === '');
+                const current = href === here;
                 html += `<a class="demo-nav__link${current ? ' demo-nav__link--current' : ''}" href="${href}">${label}</a>`;
             });
         });
