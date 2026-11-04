@@ -142,6 +142,15 @@
     }, true);
 
     /* ---------- Регистрация ---------- */
+    // Куда вернуть после регистрации: ?next=pages/book.html (только страницы этого сайта)
+    function nextAfterRegistration() {
+        const next = params.get('next') || '';
+        if (/^(index\.html|pages\/[\w\/-]+\.html)([?#].*)?$/.test(next) && !/registration|welcome-/.test(next)) {
+            return url(next);
+        }
+        return PAGES.home;
+    }
+
     function initRegistration() {
         const form = $('.registration-form');
         if (!form) return;
@@ -169,8 +178,8 @@
             if (data.get('agree') !== 'on') return;
 
             store(USER_KEY, { role, fullName, email, childName: data.get('childName') || '' });
-            toast('Аккаунт создан! Открываем профиль…');
-            setTimeout(() => go(PAGES.profile[role]), 1200);
+            toast('Аккаунт создан! Добро пожаловать в BizdinAlem');
+            setTimeout(() => go(nextAfterRegistration()), 1200);
         });
     }
 
@@ -461,8 +470,9 @@
 
     /* ---------- Приветственные страницы ---------- */
     function initWelcome() {
-        onClick('[data-role="read-book-btn"]', () => go(PAGES.book));
-        linkTo('.welcome-books__card', PAGES.book);
+        // «прочитать» → главная (без регистрации js/auth.js отправит на регистрацию)
+        onClick('[data-role="read-book-btn"]', () => go(PAGES.home));
+        linkTo('.welcome-books__card', PAGES.home);
     }
 
     /* ---------- Оставшиеся заглушки href="#" ---------- */
@@ -535,7 +545,7 @@
                 html += `<a class="demo-nav__link${current ? ' demo-nav__link--current' : ''}" href="${href}">${label}</a>`;
             });
         });
-        html += '<button type="button" class="demo-nav__reset">Сбросить демо-данные (выйти)</button>';
+        html += '<button type="button" class="demo-nav__reset">Выйти (сбросить демо-данные)</button>';
         panel.innerHTML = html;
 
         const setOpen = (open) => {
@@ -557,6 +567,7 @@
         $('.demo-nav__reset', panel).addEventListener('click', () => {
             store(USER_KEY, null);
             store(SHELF_KEY, null);
+            try { sessionStorage.removeItem('ba-welcomed'); } catch (e) { /* ok */ }
             toast('Демо-данные сброшены');
             setTimeout(() => go(PAGES.home), 800);
         });

@@ -30,7 +30,7 @@ window.BA_TRANSLATIONS = {
     'Все': { kz: 'Барлығы', en: 'All' },
     'Ничего не найдено. Попробуй другое название': { kz: 'Ештеңе табылмады. Басқа атауды көр', en: 'Nothing found. Try another title' },
     'Эта функция заработает после подключения сервера': { kz: 'Бұл мүмкіндік сервер қосылғаннан кейін жұмыс істейді', en: 'This feature will work once the server is connected' },
-    'Аккаунт создан! Открываем профиль…': { kz: 'Аккаунт құрылды! Профиль ашылуда…', en: 'Account created! Opening your profile…' },
+    'Аккаунт создан! Добро пожаловать в BizdinAlem': { kz: 'Аккаунт құрылды! BizdinAlem-ге қош келдің', en: 'Account created! Welcome to BizdinAlem' },
     'Книга добавлена на книжную полку': { kz: 'Кітап сөреге қосылды', en: 'Book added to your shelf' },
     'Книга убрана с полки': { kz: 'Кітап сөреден алынды', en: 'Book removed from your shelf' },
     'Ссылка на книгу скопирована': { kz: 'Кітап сілтемесі көшірілді', en: 'Book link copied' },
